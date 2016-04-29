@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Choose Your Own Adventure</title>
+</head>
+<body>
+	<div id="result"></div>
+<script type="text/javascript">
+var start = prompt ("You are locked in a cell, you see a 'key' and a 'gun'. What would you like to use to get out?");
+
+if (start === "key") {
+	document.querySelector('#result').textContent = "The door is unlocked now, you may proceed to next room with caution";
+	var choice = prompt ("You see a guard's uniform and an open door, 'uniform on'? or 'move out'?");
+	if (choice === "uniform on") {
+		document.querySelector('#result').textContent = "Now, you are disguised and safe to go out. Good luck out there!";
+	} else if (choice === "move out") {
+		document.querySelector('#result').textContent = "Guards captured you outside T.T... maybe next time";
+	} else {
+		alert('You can\' just sit here man! Press CMD + R to restart!');
+	}
+}	else if (start === "gun") {
+	document.querySelector('#result').textContent = "You shot that door down. Guards are coming! Move to underground!!!";
+	var choice = prompt ("At the parking lot, you see a 'tank' and a 'civic,' Choose wisely, not much time!!!");
+	if (choice === "tank") {
+		document.querySelector('#result').textContent = "They spotted a tank and brought RPG to shut your down... Sorry";
+	} else if (choice === "civic") {
+		document.querySelector('#result').textContent = "They couldn't find you in parking lot. Now you are free to go!";
+	} else {
+		alert('You can\' just sit here man! Press CMD + R to restart!');
+	}
+} else {
+	alert('You can\' just sit here man! Press OK then CMD + R to restart!');
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cumulative Sum</title>
+	<style type="text/css">
+		#text {
+			font-family: Arial;
+			font-size: 30px;
+		}
+		.compute {
+			color: blue;
+		}
+
+	</style>
+</head>
+<body>
+	<div id='text'></div>
+	<script type="text/javascript">
+		var n = 1, mult = 1, text = "<p class='compute'>"
+
+		while (n <= 10) {
+			mult *= n;
+			n++;
+		} text += "n is equal to " + (n-1) + "</p>" + "<p class='compute'>" + "Total product of numbers compute to " + mult + "</p>";
+
+		document.querySelector('#text').innerHTML = text;
+	</script>
+</body>
+</html>

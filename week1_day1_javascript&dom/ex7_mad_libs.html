@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mad Libs!</title>
+</head>
+<body>
+	<div>
+		Hello, my name is <span id="name"></span>. I am the CEO of <span id="company"></span>. Today, I am here to talk about our product, <span id="product"></span>. This is an amazing product because it helps people with <span id="problem"></span>. We wish to donate <span id="donate"></span>% of the profit back to community. So, please help us make this possible by calling us at <span id="phone"></span>. Thank you!
+	</div>
+	<script type="text/javascript">
+		var name = prompt("What is your name?");
+		document.querySelector('#name').textContent = name;
+
+		var company = prompt("What is your company's name?");
+		document.querySelector('#company').textContent = company;
+
+		var product = prompt("What is your product's name?");
+		document.querySelector('#product').textContent = product;
+
+		var problem = prompt("What is audience's problem?");
+		document.querySelector('#problem').textContent = problem;
+
+		var donate = prompt("How much % are you willing to donate?");
+		document.querySelector('#donate').textContent = donate;
+
+		var phone = prompt("What is your phone number?");
+		document.querySelector('#phone').textContent = phone;
+	</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pseudocode</title>
+</head>
+<body>
+	<div id="greeting"></div>
+	<script type="text/javascript">
+var name = "Sean", age = "30", gender = "male", is_member = true, thirsty = true, drink_of_choice;
+
+var title;
+if (gender === "male") {
+	title = "Sir";
+} else {
+	title = "Ma'am";
+}
+
+var prefix;
+if (gender === "male") {
+	prefix = "Mr.";
+} else {
+	prefix = "Ms.";
+}
+
+if (!is_member || age < 21) {
+	document.querySelector('div#greeting').textContent = "Excuse me " + title + ", I am going to have to ask you to leave";
+} else if (is_member && age > 21) {
+	document.querySelector('div#greeting').textContent = "Welcome, " + prefix + " " + name;
+	if (thirsty) {
+		drink_of_choice = prompt("What drink would you like?");
+		if (drink_of_choice !== "Coors Light") {
+			document.querySelector('div#greeting').textContent = "Yes " + name + " one " + drink_of_choice + " coming right up!";
+		} else {
+			document.querySelector('div#greeting').textContent = "Get out of here!";
+		}
+	}
+}
+
+		
+// If they are not a member or if they are under the age of 21, address them as sir or ma'am as appropriate and apologetically deny them access to the club.
+// Otherwise, greet them as Mr. or Mrs. (as appropriate by gender) and their name, and welcome them. If they are thirsty, prompt them as to what drink they would like.
+// If their favorite drink is anything but "Coors Light", tell them "yes" (name) "one" (drink_name) "coming right up!". If they ask for a Coors, kick them out.
+	</script>
+</body>
+</html>

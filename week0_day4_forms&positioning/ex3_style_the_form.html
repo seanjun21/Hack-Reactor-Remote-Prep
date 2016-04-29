@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>More Complex Example</title>
+	<link rel="stylesheet" type="text/css" href="ex5_pseudo_classes.css">
+</head>
+<body>
+<!--
+  The action attribute defines where on the server the form data should be sent
+  The method attribute specifies the HTTP method (GET or POST)
+-->
+
+<form action="form-responses/new" method="POST">
+	<input type="text" name="firstname" value="default" size="100" autofocus><br>
+	<input type="password" name="pswd"><br>
+	<input type="email" name="userEmail" placeholder="hello@site.com"><br>
+
+	<input type="radio" name="weird" value="code-blue" checked><span>pick this!</span><br>
+	<input type="radio" name="weird" value="code-red" checked><span>or pick this</span><br>
+
+	<input type="checkbox" name="optin" value="trusting" checked>You agree to everything<br>
+	<input type="checkbox" name="optout" value="skeptical" disabled>Wait, what?<br>
+
+	<select name="car">
+		<optgroup label="Swedish Cars">
+			<option value="boring">Volvo</option>
+			<option value="cool">Honda</option>
+		</optgroup>
+	</select><br>
+
+	<textarea name="user_message" rows="8" cols="40"></textarea><br>
+	<input type="submit"><br>
+</form>
+
+<!--
+  HERE IS THE BODY OF THE 'POST' NETWORK REQUEST GENERATED UPON 'SUBMIT'
+  firstname=user+numero+uno&pswd=secretstuff&userEmail=me%40site.com&weird=code-blue&optin=sucker&car=boring&userMessage=what+about++++spaces%3F%0D%0Aand%0D%0A+++indentation%3F
+-->
+
+</body>
+</html>

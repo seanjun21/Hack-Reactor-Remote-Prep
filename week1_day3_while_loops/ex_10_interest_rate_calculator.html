@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Interest Rate Calculator</title>
+</head>
+<body>
+<div id="output"></div>
+	<script type="text/javascript">
+		
+		var start = parseInt(prompt("Enter a starting balance"));
+		var target = parseInt(prompt("Enter a target balance"));
+		var interest = parseFloat(prompt("Enter an interest rate in decimals"));
+
+		//Use a while loop to calculate the number of investment periods required for the starting balance to have grown larger than the target balance
+
+		console.log(start);
+		console.log(target);
+		console.log(interest);
+
+		var investment = 0;
+		var copyStart = start;
+
+		while (copyStart < target) {
+			copyStart += interest * copyStart;
+			investment++;
+			console.log(copyStart);
+		}
+
+		console.log(investment);
+		
+		
+		var output = "To grow an initial investment of " + "$" + start + " to " + "$" + target + " at " + (interest*100) + "%" + " will require " + investment + " investment periods.";
+		document.querySelector('#output').textContent = output;
+
+	</script>
+</body>
+</html>

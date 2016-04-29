@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Shuffle!</title>
+</head>
+<body>
+	<div id="source">This is source code</div>
+	<div id="destination">This is destination code</div>
+	<div id="swap_1">This is swap 1 code</div>
+	<div id="swap_2">This is swap 2 code</div>
+	<script type="text/javascript">
+		var source = document.querySelector("#source").textContent;
+		document.querySelector("#destination").textContent = source;
+
+		var swap_1 = document.querySelector("#swap_1").textContent;
+		var swap_2 = document.querySelector("#swap_2").textContent;
+		document.querySelector("#swap_1").textContent = swap_2;
+		document.querySelector("#swap_2").textContent = swap_1;
+	</script>
+</body>
+</html>

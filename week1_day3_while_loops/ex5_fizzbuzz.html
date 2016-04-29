@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FizzBuzz</title>
+	<style type="text/css">
+		.number {
+			color: grey;
+		} 
+		.fizz {
+			color: blue;
+		}
+		.buzz {
+			color: lightgreen;
+		}
+		.fizzbuzz {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var n = 1, string = "";
+
+		while (n <= 100) {
+			if (n % 3 === 0 && n % 5 === 0) {
+				string += "<div class='fizzbuzz'>FizzBuzz</div>";
+			} else if (n % 3 === 0) {
+				string += "<div class='fizz'>Fizz</div>";
+			} else if (n % 5 === 0) {
+				string += "<div class='buzz'>Buzz</div>";
+			} else {
+				string += "<div class='number'>" + n + "</div>";
+			}
+			document.querySelector('body').innerHTML = string;
+			n++;
+		}
+
+	</script>
+</body>
+</html>

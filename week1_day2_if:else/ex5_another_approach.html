@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Output El</title>
+</head>
+<body>
+	<input type="text" id="search" placeholder="hey you, type here :z"> 
+	<span id="output"></span>
+	<script type="text/javascript">
+		var user_input = document.querySelector('input#search');
+		var output_el = document.querySelector('#output');
+		user_input.addEventListener("input", function() {
+
+			if (user_input.value === "happiness") {
+			  output_el.textContent = "ahh, the enlightened one!";
+			} else {
+			  output_el.textContent = "You're searching for the wrong thing";
+			}
+		});		
+	</script>
+</body>
+</html>

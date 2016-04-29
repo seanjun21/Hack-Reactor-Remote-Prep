@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Math</title>
+</head>
+<body>
+	<script type="text/javascript">
+	// Write code to ask a user to enter an integer greater than 0. Keep asking for a number until it is valid.
+
+	var input = prompt('Enter an integer greater than 0');
+
+	//ask user and keep asking until it's right
+
+	while( isNaN(parseInt(input)) || input < 0 ) {
+  		console.log("That is not what I was looking for...")
+  		input = prompt("Re-enter the correct value: an integer greater than 0");
+	}
+
+	console.log("yay, you did it! you wrote: " + input);
+
+	</script>
+</body>
+</html>
+

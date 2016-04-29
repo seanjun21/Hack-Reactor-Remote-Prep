@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign up Form</title>
+</head>
+<body>
+	<h1>Please Fill out Your Form</h1>
+	<form action="https://formspree.io/seanjun21@gmail.com" method="POST"><br>
+		<input type="text" name="name" placeholder="name"><br><br>
+		<input type="text" name="username" placeholder="userID"><br><br>
+		<input type="password" name="pswd" placeholder="password"><br><br>
+		<input type="email" name="userEmail" placeholder="user@email.com"><br><br>
+		<textarea name="usermessage" rows="8" cols="40"></textarea><br><br>
+		<p>
+			What is your blood type?
+		</p>
+		<select name="blood">
+			<optgroup label="Blood Type">
+				<option value="A">Type A</option>
+				<option value="B">Type B</option>
+				<option value="O">Type O</option>
+				<option value="AB">Type AB</option>
+				<option value="Dont">Do not wish to give this information</option>
+			</optgroup>
+		</select><br><br>
+		<input type="submit">
+	</form>
+
+</body>
+</html>
+
+<!-- 
+Your community site needs a sign-up form! (and this one will actually work, promise)
+
+Ask your users to fill out your form to apply to join the community
+The form should collect their name, username, password, and email
+Ask them to introduce themselves using a <textarea> element
+Ask them to fill in a "get to know you" survey using dropdown menus, checkboxes, radio buttons, and various other form elements
+Use Formspree to have form responses emailed to you -->

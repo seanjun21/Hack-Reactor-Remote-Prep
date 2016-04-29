@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Response Image Path</title>
+</head>
+<body>
+	<div id="message" hidden>An Eagle Flies at Midnight</div>
+	<div id="result"></div>
+	<img src="">
+	<script type="text/javascript">
+		var response, image_path, secret_saying;
+		secret_saying = document.querySelector('#message').textContent;
+
+		if (secret_saying === "An Eagle Flies at Midnight") {
+		  response = "You may pass";
+		  image_path = "images/open_door.jpg";
+		} else {
+		  response = "Release the hounds!";
+		  image_path = "images/attack.jpg";
+		}
+
+		document.querySelector('#result').textContent = response;
+		document.querySelector('img').src = image_path;	
+	</script>
+</body>
+</html>

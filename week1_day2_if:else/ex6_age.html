@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Age</title>
+</head>
+<body>
+<div id="result"></div>
+	<script type="text/javascript">
+		var age = prompt("This bar is for adults, how old are you?"),
+		output_el = document.querySelector('#result')
+
+		if (!(age < 21) && !(age > 35)) {
+			var name = prompt("name on ID please");
+			if (name === "Bob") {
+				output_el.textContent = "You're banned, Bob!";
+			} else {
+				output_el.textContent = "Come on in!";
+			}
+		} else if (age > 35) {
+			  output_el.textContent = "Come on in!";
+		} else {
+			output_el.textContent = "Sorry, son";
+		}
+	</script>
+</body>
+</html>

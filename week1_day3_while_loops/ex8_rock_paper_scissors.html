@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissors</title>
+</head>
+<body>
+	<script type="text/javascript">
+// Write code to play rock, paper, scissors with the user.
+
+// Ask for input until the user enters either "R", "P", or "S"
+// Use Math.random() to choose a play for the computer
+// Tell the user what the outcome was
+// Ask the user if they'd like to play again
+
+		var input = prompt("Choose among (R)ock, (P)aper, or (S)cissors!");
+
+		while( input !== "R" && input !== "P" && input !== "S") {
+			console.log("That is not what I was looking for...");
+			input = prompt("Re-enter the correct value: (R)ock, (P)aper, or (S)cissors");
+		}
+		console.log(input);
+
+		var compChoice;
+		var draw = Math.random();
+
+		if (draw <= (1/3)) {
+			compChoice = "R";
+		} else if (draw <= (2/3) && draw > (1/3)) {
+			compChoice = "P";
+		} else {
+			compChoice = "S";
+		}
+
+		console.log(compChoice);
+		console.log(draw);
+
+		var outcome;
+
+		if (input === compChoice) {
+			outcome = "It's a DRAW! refresh to play again!";
+		} else if (input === "R" && compChoice === "S") {
+			outcome = "We have a WINNER! refresh to play again!";
+		} else if (input === "P" && compChoice === "R") {
+			outcome = "We have a WINNER! refresh to play again!";
+		} else if (input === "S" && compChoice === "P") {
+			outcome = "We have a WINNER! refresh to play again!";
+		} else {
+			outcome = "You LOSE! refresh to play again!";
+		}
+
+		alert(outcome);
+		
+	</script>
+</body>
+</html>
+

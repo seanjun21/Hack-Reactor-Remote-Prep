@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess a Number</title>
+</head>
+<body>
+
+<div id="reward"></div>
+	<script type="text/javascript">
+		
+		var input = prompt("What should the highest integer N be ?");
+
+		while (isNaN(parseInt(input))) {
+			input = prompt("What should the highest integer N be ?");
+		}
+		console.log(input);
+
+		var randomNumber = Math.ceil((Math.random() * input));
+		console.log(randomNumber);
+
+		var guess = prompt("Guess a number between 1 and N for Warcraft OST")
+
+		while (randomNumber !== guess) {
+			if (randomNumber > guess) {
+				alert("Your guess is TOO LOW");
+			} else if (randomNumber < guess) {
+				alert("Your guess is TOO HIGH");
+			} else {
+				alert("That is Correct!, Your answer is " + guess + ". I will escort you to OST");
+				break;
+			}
+			guess = prompt("Guess again!");
+		}
+
+		var rewardHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/xPoSAo7YFsw?autoplay=1" frameborder="0" allowfullscreen></iframe>';
+		document.querySelector('#reward').innerHTML = rewardHTML;
+
+	</script>
+</body>
+</html>

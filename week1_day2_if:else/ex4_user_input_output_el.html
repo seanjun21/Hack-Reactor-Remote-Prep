@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Output El</title>
+</head>
+<body>
+<div id="output">
+</div>
+	<script type="text/javascript">
+		var user_input = prompt('What would you like to search for?'),
+		    output_el = document.querySelector('#output');
+
+		if (user_input !== "happiness") {
+		  if (!user_input) { // this tells us something important about empty strings
+		    // What would happen if we tried to use?     user_input =
+		    alert('Hey! You were supposed to type something.');
+		  } else {
+		    output_el.textContent = "You're searching for the wrong thing";
+		  }
+		} else {
+		  output_el.textContent = "ahh, the enlightened one!";
+		}
+	</script>
+</body>
+</html>
