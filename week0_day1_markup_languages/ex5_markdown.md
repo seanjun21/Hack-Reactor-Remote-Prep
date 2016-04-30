@@ -16,4 +16,4 @@
 
 * My favorite website is a Korean website called [soccerline](www.soccerline.co.kr). The website function as a forum for people like me who loves to watch soccer games.
 
-![local photo](/Users/seanjun/Downloads/barca.png)
+![local photo](/images/barca.png)
