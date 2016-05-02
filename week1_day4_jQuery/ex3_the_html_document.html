@@ -1,0 +1,53 @@
+
+<!-- saved from url=(0072)http://remote-prep.herokuapp.com/students/examples/jquery-selecting.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>HTML Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+<div id="everything">
+      <h1>A heading!</h1>
+      <p>Here's some text!</p>
+      <p>Here's a second set of text!</p>
+      <div class="holder">
+          <ul>
+              <li>List Item 1</li>
+              <li>List Item 2</li>
+              <li>List Item 3</li>
+          </ul>
+      </div>
+      <div class="holder">
+          <ol>
+              <li>List Item 4</li>
+              <li>List Item 5</li>
+              <li>List Item 6</li>
+          </ol>
+      </div>
+      <div id="change-me">This part needs to change!</div>
+      <div id="secret">We should hide this!</div>
+  </div>
+  <script>
+  var a = 4;
+  console.log(a)
+
+  $('h1').css('color', 'blue');
+  $('body').css('background-color', 'red');
+  $('#everything').css('font-size', '150%');
+  $('.holder').css('border-style', 'solid');
+  $('ul li').css('font-weight', 'bold');
+  $('p:first').css('color', 'green');
+  $('#secret').css('display', 'none');
+  $('#secret').css('display', 'block');
+  $('#change-me').text('Here is the new text');
+  $('#change-me').append(' Here is another text');
+  $('#change-me').html('<p>Here is the new text</p> <p>Here is another text</p>');
+  $('#change-me').append('<p>Here is 3rd text</p>');
+  $('li').text('Brand new texts');
+  $('li').append(' Followed by another texts');
+  $('#everything').append('<ol><li>Ordered List ONE</li><li>Ordered List TWO</li><li>Ordered List THREE</li></ol>');
+
+
+  </script>
+
+
+</body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Construct HTML Using Entirely jQuery</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		$('body').append('<div id="container"></div>');
+		$('#container').append('<img src="http://www.dumpaday.com/wp-content/uploads/2013/07/funny-pictures-washing-the-dishes.jpg">');
+		$('img').css({
+			'width':'20%',
+			'height':'20%'
+		});
+		$('img').css({
+			'width':'200%',
+			'height':'200%'
+		});
+		$('img').css({
+			'width':'auto',
+			'height':'auto'
+		});
+
+		$('img').fadeOut(2000).delay(1000).fadeIn().slideUp(4000);
+
+		var funnyWidth = window.innerWidth * Math.random() + 'px';
+		var funnyHeight = window.innerHeight * Math.random() + 'px';
+		console.log(funnyWidth);
+		console.log(funnyHeight);
+
+		$('img').css({
+			'position':'fixed',
+			'width':funnyWidth,
+			'height':funnyHeight
+		});
+
+	</script>
+</body>
+</html>

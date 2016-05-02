@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>This That</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id='output'></div>
+	<script type="text/javascript">
+		
+		function this_that (word1, word2, count_up_to, fizz_num, buzz_num) {
+			var n = 1, string = "";
+			while (n <= count_up_to) {
+				if (n % fizz_num === 0 && n % buzz_num === 0) {
+					string += '<div>' + word1 + word2 + '</div>';
+				} else if (n % fizz_num === 0) {
+					string += '<div>' + word1 + '</div>';
+				} else if (n % buzz_num === 0) {
+					string += '<div>' + word2 + '</div>';
+				} else {
+					string += '<div>' + n + '</div>';
+				}
+				n++;
+			}
+			$('#output').append(string);
+		}
+
+		this_that('hey', 'jude', 200, 4, 7);
+
+	</script>
+</body>
+</html>

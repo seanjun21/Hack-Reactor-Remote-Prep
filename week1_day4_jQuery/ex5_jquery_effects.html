@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Effects</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="everything">
+	    <h1 style="display:none">A heading!</h1>
+	    <p>
+	    	<p class="comments">Here's some text!</p>
+	    	<p class="comments">Here's another set of text!</p>
+	    </p>
+	    <div id="thing" style="display:none">
+	    	This is sliding down
+	    </div>
+	   
+	    <div class="holder">
+	        <ul>
+	            <li>List Item 1</li>
+	            <li>List Item 2</li>
+	            <li>List Item 3</li>
+	        </ul>
+	    </div>
+
+	    <div id="message">
+	    	This is sliding up
+	    </div>
+
+	    <div class="holder">
+	        <ol>
+	            <li style="display:none">List Item 4</li>
+	            <li style="display:none">List Item 5</li>
+	            <li style="display:none">List Item 6</li>
+	        </ol>
+	    </div>
+	    <div id="change-me">This part needs to change!</div>
+	    <div id="secret">We should hide this!</div>
+	    <br>
+	    <div class="alert">
+	    	This is toggle element, thus going to hide itself
+	    </div>
+
+
+	</div>
+
+	<script type="text/javascript">
+		$('h1').show();
+		$('#secret').hide();
+		$('ol li').fadeIn(1500);
+		$('p.comments').fadeOut(1500);
+		$('div#thing').slideDown(1500);
+		$('#message').slideUp(1500);
+		$('.alert').slideToggle(1500);
+	</script>
+</body>
+</html>

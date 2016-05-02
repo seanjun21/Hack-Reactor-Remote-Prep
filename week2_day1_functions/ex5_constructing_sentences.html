@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Constructing Sentences</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="output"></div>
+	<script type="text/javascript">
+		
+		var string_printer = function (string) {
+			$('#output').text(string);
+		};
+
+		var funny_sentence = function (noun, verb, adverb) {
+			$('#output').append('<span class="n">' + noun + '</span>' + " " + '<span class="v">' + verb + '</span>' + " " + '<span class="adv">' + adverb + '</span><br>');
+			$('.n').css('color', 'blue');
+			$('.v').css('color', 'red');
+			$('.adv').css('color', 'green');
+		};
+
+		funny_sentence('I', 'live', 'happily');
+		funny_sentence('She', 'runs', 'quickly');
+		funny_sentence('He', 'jumps', 'rapidly');
+		funny_sentence('Batman', 'punishes', 'furiously');
+		funny_sentence('Joker', 'laughs', 'hysterically');
+
+
+
+	</script>
+</body>
+</html>

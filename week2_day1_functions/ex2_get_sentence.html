@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Sentence</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		function get_sentence (str1, str2) {
+			if (Math.random() < 0.5) {
+				return $('body').append('<p>' + str1 + '</p>');
+			} else {
+				return $('body').append('<p>' + str2 + '</p>');
+			}
+		}
+
+		var n = 1;
+		while (n <= 10) {
+			get_sentence ("Happy", "Sad");
+			n++;
+		}
+
+		// Probability of having str 1 = 0.5
+		// Probability of having str 1 x 10 times ==> (0.5)^10 = 1/1024 = 0.00098
+
+	</script>
+</body>
+</html>

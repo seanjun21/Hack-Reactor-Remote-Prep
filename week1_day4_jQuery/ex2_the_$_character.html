@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The $ Character</title>
+</head>
+<body>
+<img src="">
+<h1></h1>
+<div id="notification">.html won't let you see this</div>
+<div class="container">.append add after this</div>
+	<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+	<script>
+		$('body').css('background-color', 'red');
+		$('img').attr('src','http://i.imgur.com/nWGCwiE.gif');
+
+		$('h1').text('hello');
+		$('#notification').html('<div class="alert">Hold on! <b>an error</b> has occured!</p>');
+		$('.container').append("<p>What's the difference between <i>.append()</i> and .html()?</p>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>New Date</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>	
+</head>
+<body>
+	<script type="text/javascript">
+		function newDate() {
+			console.log("Hello on " + Date());
+			return("Hello on " +Date());
+		}
+
+		newDate();
+		newDate();
+		newDate();
+
+		var jqueryFunction = function(firstName, lastName) {
+			$('body').append('<div id="output"></div>');
+			$('#output').append('<p>Hey, ' + firstName + ' ' + lastName + ' I am so happy to see you!' + ' ' + newDate() + '</p>');
+		};
+
+		jqueryFunction('Sean', 'Jun');
+	</script>
+</body>
+</html>

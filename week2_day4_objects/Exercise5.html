@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div id="output">
+	</div>
+
+	<script type="text/javascript">
+		var obj = {
+		    greeting: 'howdy',
+		    direction: 'down',
+		    color: 'red',
+		    'spaces-and-dashes can be used': ' but need to have quotes'
+		};
+		var target_key = 'greeting';
+		
+		for (var key in obj ) {
+			if (key === 'color') {
+				$('#output').append(obj[key] + ', ');
+			}
+			if (obj[key] === 'down' ) {
+				$('#output').append(key + ', ');
+			}
+			if (key === target_key) {
+				$('#output').append(obj[key] + ', ');
+			}
+		}
+		
+	</script>
+</body>
+</html>

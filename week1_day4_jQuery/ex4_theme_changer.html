@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Theme Changer</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id="everything">
+	    <h1>A heading!</h1>
+	    <p>Here's some text!</p>
+	    <p>Here's a second set of text!</p>
+	    <div class="holder">
+	        <ul>
+	            <li>List Item 1</li>
+	            <li>List Item 2</li>
+	            <li>List Item 3</li>
+	        </ul>
+	    </div>
+	    <div class="holder">
+	        <ol>
+	            <li>List Item 4</li>
+	            <li>List Item 5</li>
+	            <li>List Item 6</li>
+	        </ol>
+	    </div>
+	    <div id="change-me">This part needs to change!</div>
+	    <div id="secret">We should hide this!</div>
+	</div>
+
+	<script type="text/javascript">
+		var input = prompt("What color theme would you like? Choose among 'green', 'blue', and 'red'");
+
+		while (input !== "green" && input !== "blue" && input !== "red") {
+			input = prompt("Wrong, choose among 'green', 'blue', and 'red'");
+		}
+		console.log(input);
+
+		if (input === 'green') {
+			$('body').css('background-color', 'lightgreen');
+			$('body').css('color', 'darkgreen');
+			$('.holder').css({
+				'border-style': 'solid',
+				'border-color': 'darkgreen'
+			});
+			$('h1').before('<h1>This is green theme</h1>');
+			$('#everything').append('<img src="http://juliannehough.com/wp-content/uploads/2016/02/jules-green-eyes.jpg" width="70%">');
+		} else if (input === 'blue') {
+			$('body').css('background-color', 'lightblue');
+			$('body').css('color', 'mediumblue');
+			$('.holder').css({
+				'border-style': 'solid',
+				'border-color': 'mediumblue'
+			});
+			$('h1').before('<h1>This is blue theme</h1>');
+			$('#everything').append('<img src="https://lh3.googleusercontent.com/mCVsAtG1EpSwbaGIkSo1v2WFkwKG_khaAz0iP9F3uuDkxzfYarKAfIIJVuq0FfiC7gCLu5cP=s640-h400-e365" width="70%">');
+		} else {
+			$('body').css('background-color', 'lightpink');
+			$('body').css('color', 'maroon');
+			$('.holder').css({
+				'border-style': 'solid',
+				'border-color': 'maroon'
+			});
+			$('h1').before('<h1>This is red theme</h1>');
+			$('#everything').append('<img src="http://efdreams.com/data_images/dreams/red/red-05.jpg" width="70%">');
+		}
+
+
+
+	</script>
+</body>
+</html>
