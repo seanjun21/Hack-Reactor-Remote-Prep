@@ -1,8 +1,8 @@
 var numbers = [2, 4, 5, 37, 0];
 var doubled_numbers = {}; // should be { 2: 4, 4: 8, 5: 10, 37: 74, 0: 0 }
 
-for (var count = 0; count < numbers.length -1 ; count++) {
-	doubled_numbers[numbers[count]] = numbers[count] + numbers[count] ;
+for (var i = 0; i < numbers.length -1 ; i++) {
+	doubled_numbers[numbers[i]] = numbers[i] + numbers[i] ;
 	
 }
 
@@ -14,3 +14,5 @@ console.log(doubled_numbers);
 })*/
 
 /*console.log(doubled_numbers);*/
+
+console.log(doubled_numbers['37']);

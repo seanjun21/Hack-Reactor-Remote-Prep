@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tracker</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<style type="text/css">
+		#dog {
+			position:fixed;
+			cursor: none;
+		}
+	</style>
+</head>
+<body>
+	<img id="dog" src="http://bestanimations.com/Animals/Mammals/Dogs/puppies/cute-funny-dog-puppy-animated-gif.gif">
+	
+	<script type="text/javascript">
+		var mouse_tracker = function(event){
+		  	console.log(event.pageX, event.pageY, !!event.which);
+		  	$('#dog').css({
+		  		top: event.pageY - 50,
+		  		left: event.pageX - 50
+		  	});
+		};
+
+		$('body').on('mousemove', mouse_tracker);
+		
+		// $(someAbsolutelyPositionedElement).on('mousedown', function(e){
+		//     var node = $(this);
+		//     var position = node.offset();
+		//     var initialized = {
+		//         x : position.left - e.pageX,
+		//         y : position.top - e.pageY
+		//     };
+		//     var handlers = {
+		//         mousemove : function(e){
+		//             node.css({
+		//                 left : ( initialized.x + e.pageX ) + 'px',
+		//                 top : ( initialized.y + e.pageY ) + 'px'
+		//             });
+		//         },
+		//         mouseup : function(e){
+		//             $(this).off(handlers);   
+		//         }
+		//     };
+		//     $(document).on(handlers);
+		// });
+		
+	</script>
+</body>
+</html>

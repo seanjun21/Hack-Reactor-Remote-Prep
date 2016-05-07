@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Me the</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<!-- <div>Click Here</div>
+	<div id='target'>Click Target</div> -->
+
+	<div id='money'>
+		show me the money
+		<br>
+		<img id='moneyImage' src="http://science-all.com/images/money/money-07.jpg" style="display:none">
+	</div>
+
+	<div id='Oprah'>
+		show me the Oprah
+		<br>
+		<img id='OprahImage' src="http://www.algemeiner.com/wp-content/uploads/2015/08/oprah1.jpeg" style="display:none">
+	</div>
+	<div id='Opera'>
+		show me the Opera
+		<br>
+		<img id='OperaImage' src="http://core0.staticworld.net/images/article/2013/03/opera_logo_580-100027895-large.jpg" style="display:none">
+	</div>
+
+
+	<script type="text/javascript">
+
+		$('#money').click(function(){
+			$('#Oprah').hide();
+			$('#Opera').hide();
+			$('#moneyImage').toggle();
+		});
+
+		$('#Oprah').click(function(){
+			$('#money').hide();
+			$('#Opera').hide();
+			$('#OprahImage').toggle();
+		});
+
+		$('#Opera').click(function(){
+			$('#money').hide();
+			$('#Oprah').hide();
+			$('#OperaImage').toggle();
+		});
+
+		
+
+		// $('div').on('click', function(){
+		//   console.log('A div has been clicked!');
+		// });
+
+		// // shortcut
+		// $('#target').click(function(){
+		//   $('#target').show().css('color', 'red').text('boom goes the dynamite!');
+		// });
+
+	</script>
+
+</body>
+</html>

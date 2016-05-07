@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Highlight</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<style type="text/css">
+		.highlighted {
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<div id="target">
+		Hover over here right now!!!
+	</div>
+	<div id="magic">
+		Now you don't see me
+		<br>
+		<img id="magicImage" src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Margaret_Hamilton.gif">
+	</div>
+
+	<script type="text/javascript">
+		$('#target').on('mouseover', function(){
+		  $('#target').addClass('highlighted');
+		});
+		$('#target').on('mouseleave', function(){
+		  $('#target').removeClass('highlighted');
+		});
+		$('#magic').on('mouseover', function(){
+			$('#magicImage').hide();
+		});
+		$('#magic').on('mouseleave', function(){
+			$('#magicImage').show();
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keypress</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<input id="type">
+
+	<label></label>
+
+	<div id="output"></div>
+
+	<script type="text/javascript">
+		
+
+		var nsa_surveillance = '';
+
+		$('input#type').on('keypress', function(e){
+			nsa_surveillance += String.fromCharCode(e.keyCode);
+			$('label').text(e.keyCode);
+			$('#output').text(nsa_surveillance);
+		});
+
+		// $('body').on('keypress', function(e) {
+  //           nsa_surveillance += String.fromCharCode(e.keyCode);
+  //           $('#output').text(nsa_surveillance)
+  //       })
+
+
+
+	</script>
+</body>
+</html>

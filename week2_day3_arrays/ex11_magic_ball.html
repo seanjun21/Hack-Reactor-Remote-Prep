@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magic Ball</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<input>
+	<button>ask question</button>
+	<div id="answer"></div>
+	<script type="text/javascript">
+		//from an array of stock phrases
+		var phrases = ['JUST DO IT! (Shia LaBeouf)', 'Today is your lucky day', '50/50 I must say', 'Slim chances, but go for it!', 'Not in million years!']
+
+		//click handler
+		$('button').click(function(){
+			//randomly select a reply
+			var rand = Math.floor(Math.random() * phrases.length);
+			var answer = phrases[rand];
+			
+			phrases.splice(rand, 1); //this way, user won't receive same answer twice
+
+			$('#answer').text(answer);
+			$('button').text('ask again');
+			$('input').val('');
+		})		
+
+
+	</script>
+</body>
+</html>

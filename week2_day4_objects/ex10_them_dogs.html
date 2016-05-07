@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Them Dogs</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var them_dogs = [{
+		    name: 'Henry',
+		    age: 0.5,
+		    breed: 'Aussie',
+		    food: 'kibble',
+		    toys: ['tennis ball', 'chew toy'],
+		    picture: 'http://rubyriverminiaustralianshepherds.com/wp-content/uploads/aussie-puppy-for-sale-940x412.jpg'
+		}, {
+		    name: 'Tilly',
+		    age: 5,
+		    breed: 'Mutt',
+		    food: 'kibble',
+		    toys: ['bone', 'kong', 'squeaky toy'],
+		    picture: 'http://www.dogchannel.com/images/zones/top_promo/excited-mixed-breed.jpg'
+		}, {
+		    name: 'Apollo',
+		    age: 10,
+		    breed: 'Labrador',
+		    food: 'absolutely anything',
+		    toys: ['old sock', 'other old sock', 'more old socks'],
+		    picture: 'http://media.cmgdigital.com/shared/img/photos/2014/08/01/5a/66/LadyLabrador.jpg'
+		}];
+
+		var all_dogs = []
+		them_dogs.forEach(function(value, index) {
+			all_dogs.push(them_dogs[index]['name']);
+		});
+		console.log(all_dogs);
+
+		var all_toys = [];
+		them_dogs.forEach(function(value, index) {
+			them_dogs[index]['toys'].forEach(function(list) {
+				all_toys.push(list);
+			})
+		})
+		console.log(all_toys);
+
+
+//Write a function that takes an array of dogs and a toy as an input 
+
+		var nameDogToy = function(dogNames, toyName) {
+			var dogWhoOwnsToy = []
+			//iterate over dog list 
+			them_dogs.forEach(function(value, index) {
+				//iterate over toy list
+				them_dogs[index]['toys'].forEach(function(list) {
+					//find if toyName exist
+					if (list === toyName) {
+						dogWhoOwnsToy.push(them_dogs[index]['name']);
+					}
+				})
+			})
+//and returns the name of the dog that owns that toy.
+		return dogWhoOwnsToy;
+		}
+
+		console.log(nameDogToy(['Henry', 'Tilly', 'Apollo'], 'kong'));
+
+//Dogbook exercises are done in WebstoreHackathon
+	</script>
+</body>
+</html>

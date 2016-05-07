@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Focus Blur</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	
+</head>
+<body>
+	<form>
+  		<input id="target" type="text" value="Field 1">
+  		<input type="text" value="Field 2">
+	</form>
+	<div id="other">
+	 	Trigger the handler
+	</div>
+
+	<script type="text/javascript">
+		$( "#target" ).focus(function() {
+  			console.log( "Handler for .focus() called." );
+		});
+
+		//changing .focus to .blur has opposite effect
+	</script>
+</body>
+</html>

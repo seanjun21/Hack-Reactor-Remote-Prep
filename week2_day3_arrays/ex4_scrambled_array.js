@@ -8,4 +8,8 @@ var unscrambled_array = [];
     unscrambled_array.push(FIRST, LAST);
   }
 
-console.log(unscrambled_array);
+// console.log(unscrambled_array);
+
+var new_array = unscrambled_array.join(' ');
+
+console.log(new_array);

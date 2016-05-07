@@ -1,0 +1,26 @@
+<!-- Sean Jun and Andy Hoskins -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ex3 Array</title>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var recipe = ['Noodle', 'Steak', 'Chip'];
+		var bucket_list = ['Mountain Climbing', 'HackReactor', 'Surfing', 'Skydiving']
+
+		function append_strings (selector, array) {
+	    	var htmlString = '<div id='+ selector + '>';
+			array.forEach(function(list) {
+				htmlString += '<li>' + list + '</li>'
+			});
+			htmlString+='</div>';
+			$('body').append(htmlString);
+		}
+		append_strings('#bucket_list', bucket_list);
+
+	</script>
+</body>
+</html>

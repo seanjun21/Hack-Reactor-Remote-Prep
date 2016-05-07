@@ -20,14 +20,14 @@ var dream_life = {
 	family : true
 }
 
-/*for (var item in cat) {
-	console.log(cat[item]);
-};*/
+// for (var item in cat) {
+// 	console.log(cat[item]);
+// };
 
 // for (var category in dream_car) {
 // 	console.log(dream_car[category]);
 // }
 
-// for (var column in dream_life) {
-// 	console.log(dream_life[column]);
-// }
+for (var column in dream_life) {
+	console.log(dream_life[column]);
+}

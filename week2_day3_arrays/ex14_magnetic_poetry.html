@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Magnetic Poetry</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<span class='word'>my</span>
+	<span class='word'>Sean</span>
+	<span class='word'>name</span>
+	<span class='word'>Hello</span>
+	<span class='word'>Jun</span>
+	<span class='word'>is</span>
+
+	<br>
+	<button id='make'>make sentence</button>
+	<button id='show'>show magic word</button>
+	<div id='output'></div>
+
+
+	<script type="text/javascript">
+		var new_array=[];
+		var new_string;
+
+		$('.word').on('click', function() {
+			new_array.push($(this).text());
+			$(this).addClass('clicked');
+		});
+
+		$('button#make').on('click', function() {
+			new_string = new_array.join(' ');
+			$('#output').text(new_string);
+		});
+
+		$('button#show').on('click', function() {
+			$('.clicked').css('background-color', 'gold');
+		});
+
+	</script>
+</body>
+</html>
