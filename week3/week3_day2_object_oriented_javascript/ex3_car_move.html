@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 3</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var car = {
+		  type: "Honda Civic",
+		  position: 1,
+		  speed: 60,
+		  move: function(){
+		    var prev = this.position;
+		    this.position = this.position + this.speed;
+		    console.log(this.type + " is moving from " + prev + " to " + this.position);
+		  }
+		};
+
+		console.log('car.position ' , car.position);
+
+		car.move();
+		car.move();
+		car.move();
+
+		console.log('car.position ' , car.position);
+
+	</script>
+</body>
+</html>

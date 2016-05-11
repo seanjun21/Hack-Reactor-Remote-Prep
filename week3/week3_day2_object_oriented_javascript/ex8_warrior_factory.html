@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 8</title>
+</head>
+<body>
+<script>
+	var warrior_factory = function(name, weapon) {
+		var warrior = {};
+		warrior.name = name,
+		warrior.weapon = weapon,
+		warrior.attack = function() {
+			console.log(this.name + ' attacks with his ' + this.weapon);
+		}
+		warrior.adventure = function() {
+			console.log(this.name + ' embarks on an epic adventure!');
+			console.log('Oh no! It\'s a troll!');
+			warrior.attack();
+			console.log(this.name + ' hits the troll!');
+			console.log('The troll strikes back!')
+			warrior.attack();
+			console.log(this.name + ' slays the troll!');
+			console.log(this.name + ' drops his ' + this.weapon + ' and instead lives a life of peace.')
+		}
+	return warrior;	
+	}
+
+	console.log(warrior_factory('bill','knife'))
+
+	var warrior1 = warrior_factory("Gregor", "Shortsword");
+	var warrior2 = warrior_factory("Aurthur", "Exacalibur");
+
+	warrior1.adventure();
+	warrior2.adventure();
+
+</script>
+</body>
+</html>

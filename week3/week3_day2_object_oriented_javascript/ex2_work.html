@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 2</title>
+</head>
+<body>
+
+<script>
+	var person = {
+		name: 'Sean',
+		location: 'Phoenix',
+		age: 30,
+		hobbies: ['coding', 'video-gaming'],
+		dog: {
+			name: 'doggy McDogface',
+			hobbies: ['playing fetch with itself', 'being dumb']
+		},
+		party: function() {
+			console.log('dance, dance, dance!');
+		},
+		work: function() {
+			console.log("Hi, I'm " + this.name + " you are awesome.");
+			console.log("I would much rather be " + this.hobbies[0] + " right now.")
+		}
+	};
+
+	person.workout = function() {
+		console.log("Hi, I'm " + this.name + " will you spot me?");
+		console.log("I'd much rather be " + this.hobbies[1] + " right now.")
+	}
+
+	person.float_through_life_on_autopilot = function() {
+		this.work();
+		this.workout();
+	}
+
+	person.float_through_life_on_autopilot()
+
+</script>
+</body>
+</html>

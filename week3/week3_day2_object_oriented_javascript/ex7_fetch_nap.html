@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 7</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+		// var eat_fn = function () {
+		// 	console.log(this.name + ' loves to eat ' + this.favorite_food);
+		// 	this.location = 'home';
+		// 	this.hungry = false;
+		// };
+
+		// var party_fn = function () {
+		// 	console.log(this.name + " dances wildly.")
+		// };
+
+		// var go_to_park_fn = function () {
+		// 	console.log('The dog was at ' + this.location + ' he\'s now at the park');
+		// 	this.location = 'park';
+		// 	this.hungry = true;
+		// }
+
+		// var dog1 = {
+		// 	name: 'Mr. Spaghetti',
+		// 	location: 'Unknown',
+		// 	favorite_food: 'Bacon',
+		// 	hungry: true,
+		// 	eat: eat_fn,
+		// 	party: party_fn,
+		// 	go_to_park: go_to_park_fn,
+		// }
+
+		// var dog2 = {
+		// 	name: 'Leia',
+		// 	location: 'A Galaxy Far Far Away',
+		// 	favorite_food: 'bones',
+		// 	hungry: true,
+		// 	eat: eat_fn,
+		// 	party: party_fn,
+		// 	go_to_park: go_to_park_fn,
+		// }
+
+		// var fetch_adder = function (dog) {
+		// 	dog.fetch = function() {
+		// 		console.log(this.name + ' fetches the stick and gets its ' + this.favorite_food);
+		// 	}
+		// }
+
+		// fetch_adder(dog1);
+		// fetch_adder(dog2);
+
+		// dog1.fetch();
+		// dog2.fetch();
+
+		var meow_fn = function() {
+				console.log(this.name + ' meowed!');
+			}
+
+			var cat1 = {
+				name: 'Charlie',
+				meow: meow_fn,
+			}
+
+			var cat2 = {
+				name: 'Mr. Snuggles',
+				meow: meow_fn,
+		}
+
+		var nap_adder = function (cat) {
+			cat.nap = function () {
+				console.log(this.name + ' takes a nap');
+			}
+		}
+
+
+		nap_adder(cat1);
+		nap_adder(cat2);
+
+		cat1.nap();
+		cat2.nap();
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 6</title>
+</head>
+<body>
+
+<script>
+
+	// var eat_fn = function () {
+	// 	console.log(this.name + ' loves to eat ' + this.favorite_food);
+	// 	this.location = 'home';
+	// 	this.hungry = false;
+	// };
+
+	// var party_fn = function () {
+	// 	console.log(this.name + " dances wildly.")
+	// };
+
+	// var go_to_park_fn = function () {
+	// 	console.log('The dog was at ' + this.location + ' he\'s now at the park');
+	// 	this.location = 'park';
+	// 	this.hungry = true;
+	// }
+
+	// var dog1 = {
+	// 	name: 'Mr. Spaghetti',
+	// 	location: 'Unknown',
+	// 	favorite_food: 'Bacon',
+	// 	hungry: true,
+	// 	eat: eat_fn,
+	// 	party: party_fn,
+	// 	go_to_park: go_to_park_fn,
+	// }
+
+	// var dog2 = {
+	// 	name: 'Leia',
+	// 	location: 'A Galaxy Far Far Away',
+	// 	favorite_food: 'bones',
+	// 	hungry: true,
+	// 	eat: eat_fn,
+	// 	party: party_fn,
+	// 	go_to_park: go_to_park_fn,
+	// }
+
+	// dog1.go_to_park();
+	// dog2.go_to_park();
+	// dog1.eat();
+	// dog2.eat();
+
+	// var move_fn = function(){
+	// 	var prev_position = this.position
+	// 	this.position += this.speed;
+	// 	console.log('The ' + this.type + ' has moved from position ' + prev_position + ' to ' + this.position)
+
+	// };
+	
+	// var car1 = {
+	// 	type: 'Honda Civic',
+	// 	speed: 5,
+	// 	position: 1,
+	// 	move: move_fn,
+	// }
+
+	// var car2 = {
+	// 	type: 'Toyota Corolla',
+	// 	speed: 3,
+	// 	position: 6,
+	// 	move: move_fn,
+	// }
+
+	// car1.move()
+	// car2.move()
+
+	var meow_fn = function() {
+		console.log(this.name + ' meowed!');
+	}
+
+	var cat1 = {
+		name: 'Charlie',
+		meow: meow_fn,
+	}
+
+	var cat2 = {
+		name: 'Mr. Snuggles',
+		meow: meow_fn,
+	}
+
+	cat1.meow()
+	cat2.meow()
+
+</script>
+</body>
+</html>

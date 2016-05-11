@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Page</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+</head>
+<body>
+	<div id='container'>
+		
+	</div>
+	<script type="text/javascript">
+	
+/*		$.ajax({
+		  method: 'GET',
+		  url: 'http://jsonplaceholder.typicode.com/posts/1',
+		  success: function(data) {
+		    $('#container').append(data.id);
+		  }
+		});
+
+		$.ajax({
+		  method: 'GET',
+		  url: 'http://jsonplaceholder.typicode.com/posts/2',
+		  success: function(data) {
+		    $('#container').append(data.id);
+		  }
+		});*/
+		var data_here;
+		var place_post_on_page = function(data){
+			 for(var i =0; i < data.length; i++){
+			 $('#container').append('<button>' + data[i].title + '</button>');
+
+			 //click eventhandler input --> output with data[i].body
+			} 
+			data_here = data;
+		}
+
+
+		$.get('http://jsonplaceholder.typicode.com/posts').success(place_post_on_page);
+
+		$('#cities button').on('click', function() {
+		    event.preventDefault();
+		    var index;
+		    for(var i =0; i < data_here.length; i++){
+		    	if($(this).text() === data_here[i].title)
+		    	
+		    		
+		    	}
+		    }
+		    $('#container').empty();
+
+		    $.get('http://jsonplaceholder.typicode.com/posts/').success(place_post_on_page);
+		});
+//for loop to for from ids 1-10
+		
+/*		for(var i=1; i<11 ;i++ ) {
+			$.get('http://jsonplaceholder.typicode.com/posts/' + i).success(place_post_on_page);
+			console.log(i);
+		}*/
+
+	</script>
+</body>
+</html>

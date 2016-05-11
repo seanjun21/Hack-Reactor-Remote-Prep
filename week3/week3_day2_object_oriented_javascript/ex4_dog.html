@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise 4</title>
+</head>
+<body>
+
+<script>
+	var dog = {
+		name: 'Mr. Spaghetti',
+		location: 'Unknown',
+		party: function() {
+			console.log(this.name + " dances wildly.")
+		},
+		favorite_food: 'Bacon',
+		eat: function() {
+			console.log(this.name + ' loves to eat ' + this.favorite_food);
+			this.location = 'home';
+			this.hungry = false;
+		},
+		hungry: true,
+		go_to_park: function() {
+			console.log('The dog was at ' + this.location + ' he\'s now at the park');
+			this.location = 'park';
+			this.hungry = true;
+		}
+	}
+
+	console.log(dog.go_to_park())
+	console.log(dog.hungry)
+	console.log(dog.eat())
+	console.log(dog.location)
+
+</script>
+</body>
+</html>
